@@ -1,0 +1,160 @@
+/* Original modal design and animation via w3schools.
+ Add Animation */
+@-webkit-keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+/* Variables */
+$modal-green : #5CB85C;
+$box-background: #407F40;
+$add-recipe: #7FFF7F;
+$dark-text: #204020;
+$recipe-area-background: #ffe3ff;
+
+
+body {
+  color: $dark-text;
+  background-color: #52CC97;
+  font-size: 16px;
+}
+
+.top, .end {
+  text-align: center;
+}
+
+#content {
+  width: 800px;
+  margin: auto;
+  background-color: #4d164b;
+  color: $dark-text;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 15px;
+
+  .top-bar{
+    box-shadow: 0 0 5px #000000, 0 5px 5px -3px #000000;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .addRecipe {
+    background-color: $add-recipe;
+    margin: auto;
+  }
+
+  .recipe-area {
+    background-color: #ffe3ff;
+    border-style: solid;
+    border-color: #4d164b;
+    border-width: 2px;
+  }
+
+  .instructions-area, .ingredients-area {
+    margin: 25px;
+    padding: 5px;
+  }
+
+  .ingredients-area {
+    border-top-style: dashed;
+    border-top-width: 2px;
+    border-top-color: #4d164b;
+    padding-top: 30px;
+  }
+
+  .instructions-area{
+    border-top-style: dashed;
+    border-top-width: 1px;
+    border-top-color: #4d164b;
+    padding-top: 30px;
+  }
+
+  .edit-button, .delete-button{
+    margin: 25px;
+  }
+
+  .edit-button{
+    background-color: $add-recipe;
+  }
+
+  .delete-button{
+    background-color: #FF7F83;
+  }
+
+}
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  .name-box, .ingredients-box, .instructions-box {
+    width: 700px;
+  }
+
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #52CC97;
+    color: black;
+    /* The Close Button */
+    .close {
+      color: #4d164b;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+  }
+
+  .modal-save{
+    margin: 25px;
+    background-color: #7FFF7F;
+  }
+
+  /* Modal Body */
+  .modal-body {padding: 2px 16px;}
+
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: black;
+  }
+
+}

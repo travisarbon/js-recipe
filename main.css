@@ -1,0 +1,128 @@
+/* Original modal design and animation via w3schools.
+ Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+/* Variables */
+body {
+  color: #204020;
+  background-color: #52CC97;
+  font-size: 16px; }
+
+.top, .end {
+  text-align: center; }
+
+#content {
+  width: 800px;
+  margin: auto;
+  background-color: #4d164b;
+  color: #204020;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 15px; }
+  #content .top-bar {
+    box-shadow: 0 0 5px #000000, 0 5px 5px -3px #000000;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+  #content .addRecipe {
+    background-color: #7FFF7F;
+    margin: auto; }
+  #content .recipe-area {
+    background-color: #ffe3ff;
+    border-style: solid;
+    border-color: #4d164b;
+    border-width: 2px; }
+  #content .instructions-area, #content .ingredients-area {
+    margin: 25px;
+    padding: 5px; }
+  #content .ingredients-area {
+    border-top-style: dashed;
+    border-top-width: 2px;
+    border-top-color: #4d164b;
+    padding-top: 30px; }
+  #content .instructions-area {
+    border-top-style: dashed;
+    border-top-width: 1px;
+    border-top-color: #4d164b;
+    padding-top: 30px; }
+  #content .edit-button, #content .delete-button {
+    margin: 25px; }
+  #content .edit-button {
+    background-color: #7FFF7F; }
+  #content .delete-button {
+    background-color: #FF7F83; }
+
+.modal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  /* Modal Content */
+  /* Modal Body */
+  /* Modal Footer */ }
+  .modal .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s; }
+  .modal .name-box, .modal .ingredients-box, .modal .instructions-box {
+    width: 700px; }
+  .modal .modal-header {
+    padding: 2px 16px;
+    background-color: #52CC97;
+    color: black;
+    /* The Close Button */ }
+    .modal .modal-header .close {
+      color: #4d164b;
+      float: right;
+      font-size: 28px;
+      font-weight: bold; }
+    .modal .modal-header .close:hover,
+    .modal .modal-header .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer; }
+  .modal .modal-save {
+    margin: 25px;
+    background-color: #7FFF7F; }
+  .modal .modal-body {
+    padding: 2px 16px; }
+  .modal .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: black; }
+
+/*# sourceMappingURL=main.css.map */
